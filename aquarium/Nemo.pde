@@ -4,14 +4,15 @@ class Nemo extends Animal {
   }
 
   void move() {
-   super.move();
-   ay += aspeedy;
-   if (ay < 50 || ay > tankH - size) {
-     aspeedy *= -1;
-    }
+     super.move();
+     ay += aspeedy;
+     if (ay < 50 || ay > tankH - size) {
+       aspeedy *= -1;
+     }
   }
   
   void display() {
-     image(Nemo, ax, ay, size, size);
-  }
+    Animal = Nemo;
+    super.display();
+   }
 }

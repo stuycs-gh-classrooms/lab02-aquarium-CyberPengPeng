@@ -1,18 +1,25 @@
 class Spongebob extends Animal {
- 
+  int maxH; 
+  
   Spongebob (int animalX, int animalY, int animalSize) {
     super(animalX, animalY, animalSize);
   }
 
   void move() {
-    if (ay > height - floorH && ay < tankH ) {
-      ay += aspeedy;
-    }
-    if (ay <= height - floorH) {
+    maxH = int(random(floorH, height - size));
+    if (ay <=  maxH) {
       super.move();
-    }
+   }
+    else if  (ay ==  maxH ) {
+      ay += aspeedy;
+      ay = constrain(0, ay, maxH);
+      if (ay == height - floorH){
+        super.move();
+      }
+   }
 }  
    void display() {
-     image(Spongebob, ax, ay, size, size);
+     Animal = Spongebob;
+     super.display();
   }
 }

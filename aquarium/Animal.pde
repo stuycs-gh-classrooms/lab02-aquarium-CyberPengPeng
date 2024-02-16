@@ -4,17 +4,19 @@ class Animal {
   int size;
   int aspeedy;
   int aspeedx;
-  boolean death; 
-  
+  int aliveFrames;
+  int maxFramesAlive;
+
   Animal(int animalX, int animalY, int animalSize) {
     ax = animalX;
     ay = animalY;
     size = animalSize;
-    
+    maxFramesAlive = int(random(50, 250));
     aspeedx = int(random(1, 3));
     aspeedy = int(random(1, 3));
-
+    aliveFrames = 0;
   }
+  
 
 void move() {
   ax += aspeedx;
@@ -28,10 +30,14 @@ void move() {
     aspeedy *= -1;  
     ay += aspeedy;
   }
+  
+  aliveFrames++;
 }
-
-
   void display() {
-    image(Animal, ax, ay, size, size);
+    if (maxFramesAlive > aliveFrames) {
+        image(Animal, ax, ay, size, size);
+      }
+    else {      
+      }
   }
 }

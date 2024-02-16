@@ -7,6 +7,8 @@ int tankH;
 PImage Animal; 
 PImage Nemo;
 PImage Spongebob; 
+PImage Crab;
+PImage Fish;
 
 void setup() {
   size(600, 600);
@@ -17,6 +19,8 @@ void setup() {
   Animal = loadImage("fish.jpg");
   Nemo = loadImage("nemo.jpeg");
   Spongebob = loadImage ("spongebob.jpg");
+  Crab = loadImage ("Crab.png");
+  Fish = loadImage ("fish1.png");
 }//setup
 
 
@@ -25,6 +29,8 @@ void draw() {
   t.moveAnimals();
   t.movenemos();
   t.movespongebobs();
+  t.movecrabs();
+  t.movefishs();
   t.display();
 }
 
@@ -38,5 +44,13 @@ void keyPressed() {
   }
   if (keyCode == UP) {
     t.addNemo (mouseX, mouseY);
+  }
+  
+  if (keyCode == LEFT) {
+    t.addCrab (mouseX, mouseY);
+  }
+  
+  if (keyCode == RIGHT ){
+    t.addFish (mouseX, mouseY);
   }
 }
