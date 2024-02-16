@@ -4,6 +4,7 @@ class Animal {
   int size;
   int aspeedy;
   int aspeedx;
+  boolean death; 
   
   Animal(int animalX, int animalY, int animalSize) {
     ax = animalX;
