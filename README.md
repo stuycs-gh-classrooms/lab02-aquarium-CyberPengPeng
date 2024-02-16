@@ -2,9 +2,9 @@
 # Aquarium Lab
 #### Name:
 #### TableBuddies+™
-- TB+ 0:
-- TB+ 1:
-- TB+ 2:
+- TB+ 0: Evan Chan
+- TB+ 1: Yucheng Wang
+- TB+ 2: Richard Wang
 
 ---
 ### Instructions
